@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Digite seu nome" id="nome_usuario" name="nome">
+    <button id="mostrarSaida">Mostrar Saída</button>
+    <div id="saida"></div> <!-- Aqui será mostrado o resultado -->
+
+    <script>
+        const inputElement = document.getElementById('nome_usuario');
+        const outputElement = document.getElementById('saida');
+        const buttonElement = document.getElementById('mostrarSaida');
+
+        inputElement.addEventListener('input', function () {
+            console.log(inputElement.value);
+            // Você pode realizar outras ações aqui com o valor do campo de entrada
+        });
+
+        buttonElement.addEventListener('click', function () {
+            // Aqui, ao clicar no botão, você pode mostrar a saída desejada
+            const nome = inputElement.value;
+            outputElement.textContent = `Olá, ${nome}!`; // Aqui estamos apenas mostrando uma saudação simples
+        });
+    </script>
+</body>
+
+</html>
